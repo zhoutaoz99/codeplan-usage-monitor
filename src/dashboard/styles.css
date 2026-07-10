@@ -1,0 +1,38 @@
+:root { color: #e5e7eb; background: #0b1020; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 360px; }
+button { border: 0; border-radius: 8px; padding: 8px 12px; background: #5eead4; color: #07251f; font: inherit; font-weight: 700; cursor: pointer; }
+button:disabled { cursor: wait; opacity: .55; }
+.button-secondary { background: #263247; color: #e5e7eb; }
+.button-danger { background: #4b2025; border: 1px solid #fb7185; color: #fecaca; }
+.button-danger:hover:not(:disabled) { background: #6b2730; color: #fff1f2; }
+.app { width: min(900px, 100%); margin: 0 auto; padding: 18px; }
+.loading { min-height: 180px; display: grid; place-items: center; color: #9ca3af; }
+.app-header { display: flex; gap: 16px; align-items: flex-start; justify-content: space-between; margin-bottom: 16px; }
+h1, h2, p { margin-top: 0; }
+h1 { font-size: 22px; margin-bottom: 6px; }
+.app-header p, .provider-heading p, footer { color: #9ca3af; font-size: 12px; line-height: 1.45; margin-bottom: 0; }
+.header-actions { display: flex; gap: 8px; flex-shrink: 0; }
+.provider-grid { display: grid; gap: 12px; }
+.provider-card { background: #121a2b; border: 1px solid #27334b; border-radius: 12px; padding: 15px; }
+.provider-card--inactive { border-style: dashed; }
+.provider-heading { display: flex; gap: 12px; justify-content: space-between; }
+.provider-heading h2 { margin-bottom: 3px; font-size: 17px; }
+.status { font-size: 11px; line-height: 1; align-self: flex-start; border-radius: 20px; padding: 6px 8px; background: #253147; color: #cbd5e1; white-space: nowrap; }
+.status--ok { color: #9af4d7; background: #123d36; }
+.status--partial, .status--page_not_ready { color: #fde68a; background: #4a3b12; }
+.status--auth_required, .status--parser_mismatch, .status--blocked { color: #fca5a5; background: #4b2025; }
+.quota-list { display: grid; gap: 0; margin-top: 12px; }
+.quota-row { display: flex; justify-content: space-between; gap: 16px; padding: 9px 0; border-top: 1px solid #202c40; }
+.quota-row span { display: block; font-size: 14px; }
+.quota-row small { color: #9ca3af; font-size: 11px; }
+.quota-value { font-size: 13px; white-space: nowrap; text-align: right; }
+.quota-value--healthy { color: #86efac; }.quota-value--warning { color: #fcd34d; }.quota-value--danger { color: #fb7185; }.quota-value--empty { color: #f43f5e; }.quota-value--neutral { color: #cbd5e1; }
+.empty-state { color: #aeb9ca; font-size: 13px; margin: 14px 0; }
+.card-meta { display: flex; flex-wrap: wrap; gap: 5px 12px; border-top: 1px solid #202c40; padding-top: 10px; color: #8090a9; font-size: 11px; }
+.card-actions { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 12px; }
+.notice, .error-text { color: #fecaca; background: #402128; border-radius: 8px; padding: 9px 11px; font-size: 12px; }.error-text { margin: 10px 0 0; }
+.history { margin: 12px 0; padding: 9px; background: #0e1626; border-radius: 8px; }.history-title, .history-empty { color: #8090a9; font-size: 11px; margin: 0 0 5px; }.history svg { width: 100%; height: 56px; display: block; }.chart-grid { stroke: #263247; stroke-width: .75; }.chart-line { fill: none; stroke: #63e6be; stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+footer { margin: 16px 2px 2px; }
+.option-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 11px 0; border-top: 1px solid #202c40; font-size: 14px; }.option-row input { width: 18px; height: 18px; accent-color: #5eead4; }.option-field { display: grid; gap: 6px; padding: 11px 0; border-top: 1px solid #202c40; font-size: 13px; color: #cbd5e1; }.option-field input { width: min(360px, 100%); border: 1px solid #3a4760; border-radius: 7px; background: #0e1626; color: #f3f4f6; padding: 8px; font: inherit; }.option-copy { color: #aeb9ca; font-size: 13px; line-height: 1.5; }
+@media (max-width: 520px) { .app-header { flex-direction: column; }.header-actions { width: 100%; }.header-actions button { flex: 1; }.card-actions { align-items: flex-start; flex-direction: column; } }
